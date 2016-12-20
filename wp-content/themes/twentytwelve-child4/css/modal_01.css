@@ -1,0 +1,58 @@
+/* ----------------------------------------------*/
+/* モーダルCSS  */
+#modal-open{
+    cursor: pointer;
+}
+#modal-content-01{
+	min-width: 300px;
+    margin: 0;
+    padding: 10px 10px;
+    border: 0px solid #aaa;
+    background: #fff;
+    position: fixed;
+    display: none;
+    z-index: 110;
+    border-radius: 3px;
+}
+#modal-content-02{
+	min-width: 300px;
+    margin: 0;
+    padding: 10px 10px;
+    border: 0px solid #aaa;
+    background: #fff;
+    position: fixed;
+    display: none;
+    z-index: 110;
+    border-radius: 3px;
+}
+
+#modal-overlay {
+	z-index: 100;
+	display: none ;
+	position: fixed ;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 120% ;
+	background-color: rgba( 0,0,0, 0.75 ) ;
+}
+
+.button-link {
+	color: #FFF ;
+	padding: 1px 10px;
+    border-radius: 2px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+ 
+.button-link:hover {
+	cursor: pointer ;
+}
+a#modal-close {
+	margin-top:10px;
+	display: inline-block;
+    background: #6B6B6B;
+    line-height: 25px;
+    margin-top: 10px;
+}
+/* ----------------------------------------------*/

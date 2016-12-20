@@ -1,0 +1,546 @@
+/*
+ Theme Name:twentytwelve-child4
+ Template:twentytwelve
+*/
+/* 
+@import url('css/ress.css');//CSS reset
+ */
+/* -----------------------------------------------  */
+/* reset
+/* -----------------------------------------------  */
+/* IEでもきれいなフォント  */
+html {
+}
+body.custom-font-enabled {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+html,body {
+    font-size: 1rem;
+    font-size: 15px;
+    color: #000;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+html {
+  min-height: 100%;
+  position: relative;
+}
+body .site {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    box-shadow: none;
+    padding:0px;
+}
+.site {
+    margin: 0 auto;
+    max-width: 960px;
+    max-width: 68.571428571rem;
+    max-width: inherit;
+    overflow: hidden;
+}
+.widget-area {/* サイドメニューを非表示 */
+    display: none;
+}
+.site-content {
+    float: inherit;
+    clear: both;
+    width: 100%;
+}
+
+ /*  クリックしたときの点線を消す */
+a {
+    /*   outline: none; */
+}
+a:focus, 
+*:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+} /*  */
+
+
+footer[role="contentinfo"] a:hover {
+    color: #F00;
+}
+footer[role="contentinfo"] a {
+    color: #686868;
+}
+
+a {
+    color: #4caf50;
+}
+a:visited {
+    color: #4caf50;/*  !important × */
+}
+.entry-content a:visited, 
+.comment-content a:visited {
+    color: inherit;
+}
+a:hover {
+    color: #FF0;
+}
+
+/* -----------------------------------------------  */
+/* footer
+/* -----------------------------------------------  */
+/*  フッターを下部に固定 
+  http://coliss.com/articles/build-websites/operation/css/css-simple-sticky-footer-by-melissa.html
+-------------------------------------*/
+html {
+  min-height: 100%;/*  フッターの高さ分余白を取る */
+  position: relative;/*  フッターの高さ分余白を取る */
+}
+ 
+body {
+	margin-bottom: 0em;/*  フッターの高さ分余白を取る */
+}
+footer[role="contentinfo"] {
+    border-top: 0px solid #ededed;
+    clear: both;
+    line-height: 2;
+    max-width: inherit;
+    margin:0 auto;
+    padding: 0rem 0;
+}
+.foot_li {
+    display: inline-block;
+}
+footer.entry-meta{
+	display:none;/* 編集リンク非表示 */
+}
+
+
+
+/* -----------------------------------------------  */
+/*  ページトップへ
+/* http://www.webopixel.net/javascript/538.html 
+/* -----------------------------------------------  */
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a {
+    text-decoration: none;
+    color: #fff;
+    width: 60px;
+    padding: 10px 10px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    line-height: 15px;
+    background: #3c3a3a;
+    
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #2b2b2b;
+    
+}
+/* -----------------------------------------------  */
+/*  h1
+/* -----------------------------------------------  */
+/* center_border */
+h1.center_border {
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    z-index: 9;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #FF9800;
+    font-weight: normal;
+}
+@media screen and (min-width: 800px) {/*  PC  */
+	h1.center_border {
+	    width: 40%;
+	}
+}
+h1.center_border::before {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    background: -webkit-linear-gradient(-45deg, transparent, #ccc 10%, #ccc 90%, transparent);
+    background: linear-gradient(-45deg, transparent, #ccc 10%, #ccc 90%, transparent);
+}
+h1.center_border span {
+    position: relative;
+    z-index: 5;
+    display: inline-block;
+    margin: 0 1em 0 0;
+    padding: 0 0.5em 0 0;
+    background-color: #FFF;
+    text-align: left;
+}
+/* -----------------------------------------------  */
+/*  table
+/* -----------------------------------------------  */
+.entry-content table tr th,
+.entry-content table tr td{
+	border:1px solid;
+    padding-left: 5px;
+}
+th {
+    background: #d7e5ec;
+    height: 35px;
+    padding-top: 5px;
+}
+td {/* 英数字を折り返す */
+	word-break: break-all;
+}
+@media screen and (max-width: 480px) { /*  スマホ  */
+	/*  table レスポンシブ対応  */
+	table.respoTable  td{
+		width: 100%;
+	    display: block;	
+	}
+	input, select, textarea{
+		width: 100%;
+	}
+	
+	/* 一部解除 */
+	table.priceTable  td {
+		width: inherit;
+	    display: table-cell;
+	}
+	table.autowarpTable  td {/* 英数字を折り返す */
+		word-break: break-all;
+	}
+}
+
+/* -----------------------------------------------  */
+/* div丸ごとリンク */
+/* -----------------------------------------------  */
+.div_link_box {
+    position:relative;
+    width:100%;
+}
+.div_link_box a.linkbox{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-indent:-9999px;
+    border: 4px solid #ffffff;
+    box-shadow: 1px 1px 4px #c5c5c5;
+}
+.div_link_box a.linkbox:hover{
+    border: 4px solid #ffffff;
+    box-shadow: 2px 2px 14px #444;
+}
+.div_link_box a.linkbox  div.trial_banner_btn {
+	background: #DDD;
+}
+
+
+
+/* -----------------------------------------------  */
+/* css▲ */
+/* -----------------------------------------------  */
+/* css 角丸矢印  <a href="#" class="css_arrow sample4-6">共通のHTML</a> */
+.css_arrow{
+position: relative;
+display: inline-block;
+padding: 0 0 0 16px;
+color: #000;
+vertical-align: middle;
+text-decoration: none;
+font-size: 15px;
+}
+.css_arrow::before,
+.css_arrow::after{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+content: "";
+vertical-align: middle;
+}
+
+.sample4-6::before{
+box-sizing: border-box;
+width: 12px;
+height: 12px;
+border: 1px solid #7a0;
+-webkit-border-radius: 25%;
+border-radius: 25%;
+}
+.sample4-6::after{
+left: 5px;
+box-sizing: border-box;
+width: 3px;
+height: 3px;
+border: 3px solid transparent;
+border-left: 3px solid #7a0;
+}
+/* ----------------------------------------------  */
+/* css 矢印  */
+.inlineblock a:before{
+    content: '';
+    width: 3px;
+    height: 3px;
+    border: 0px;
+    border-top: solid 3px #6FCDEC;
+    border-right: solid 3px #6FCDEC;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -11px;
+}
+/* ----------------------------------------------  */
+.headline02222:after {
+	content: '';
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+	bottom: -50px; /*マイナスボーダー幅の2倍*/
+	left: 50%; /*ボーダー幅の2倍*/
+	width: 50px; /*ボーダー幅の2倍*/
+	height: 50px; /*ボーダー幅の2倍*/
+	margin-left: -25px; /*マイナスボーダー幅*/
+	border: #FFF 25px solid; /* 隣接ボックスの背景色で任意の幅を設定 */
+	border-top: transparent 25px solid; 
+	background: #00479d; /*背景画像を中央、ボックス上端からボーダー幅分上にポジション指定*/
+}
+/* ----------------------------------------------  */
+ /*  手順用矢印背景 */
+.step_arrow {
+    width: 100%;
+    height: 40px;
+    background: url(/wp-content/uploads/img/common/arrow_big03.png) no-repeat 100%;
+    background-position: center 0px;
+}
+/* ----------------------------------------------  */
+ /*  アローアイコン */
+.arrow3 {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+}
+.arrow3::before {
+	content: '';
+    width: 7px;
+    height: 7px;
+    border: 0px;
+    border-top: solid 2px #FF5722;
+    border-right: solid 2px #FF5722;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 36%;
+    left: 0;
+    margin-top: 0px;
+}
+a.arrow4{
+	position:relative;
+	display:inline-block;
+	padding:0 32px 0 16px;
+	color:#fff;
+	text-decoration:none;
+	height:24px;
+	line-height:27px;
+	border-radius:12px;
+	background: #005b88;
+	min-width: 160px;
+    letter-spacing: 1px;
+}
+.entry-content a.arrow4:visited,
+.comment-content a.arrow4:visited {
+	color: #FFF;
+}
+.entry-content a.arrow4:hover,
+.comment-content a.arrow4:hover {
+	color: #DDD;
+}
+
+a.arrow4:before,
+a.arrow4:after{
+	content:"";
+	display:block;
+	position:absolute;
+}
+a.arrow4:before{
+	width:16px;
+	height:16px;
+	background:#fff;
+	border-radius:50%;
+	right:4px;
+	top:4px;
+}
+a.arrow4:after{
+	width:4px;
+	height:4px;
+	border-right:2px solid #62A1CB;
+	border-top:2px solid #62A1CB;
+	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
+	right:10px;
+	top:9px;
+}
+
+/* -----------------------------------------------  */
+/*  fedeIN List 
+ http://imasashi.net/element-fadein.html
+ http://creator.aainc.co.jp/archives/5357#demo
+/* -----------------------------------------------  */
+/* 画面外にいる状態 */
+.fadeinlist {
+    opacity : 0.1;
+    transform : translate(0, 30px);
+    transition : all 400ms;
+    }
+ 
+/* 画面内に入った状態 */
+.fadeinlist.scrollin {
+    opacity : 1;
+    transform : translate(0, 0);
+    }
+
+.fadeinlist.scrollout {
+    opacity : 0;
+    }
+/* -----------------------------------------------  */
+/*  popupバナー
+ http://www.webopixel.net/javascript/538.html
+/* -----------------------------------------------  */
+@media screen and (min-width: 800px) {/*  PC  */
+	#popup-baner {
+	    position: fixed;
+	    top: 150px;
+	    right: 0px;
+	    font-size: 77%;
+	    z-index: 20;
+	    zoom: 1;
+	}
+	#popup-baner a {
+	    text-decoration: none;
+	    color: #fff;
+	    width: 160px;
+	    padding: 10px 10px;
+	    text-align: center;
+	    display: block;
+	    border-radius: 5px;
+	    line-height: 15px;
+	    background: #E91E63;
+	}
+	#popup-baner a:hover {
+	    text-decoration: none;
+	    background: #2b2b2b;
+	}
+	#popup-baner2 {
+	    position: fixed;
+	    top: 210px;
+	    right: 0px;
+	    font-size: 77%;
+	    z-index: 20;
+	    zoom: 1;
+	}
+	#popup-baner2 a {
+	    text-decoration: none;
+	    color: #fff;
+	    width: 120px;
+	    height: 120px;
+	    padding: 10px 10px;
+	    text-align: center;
+	    display: block;
+	    border-radius: 65px;
+	    line-height: 15px;
+	    background: #8bc34a;
+	}
+	#popup-baner2 a span {
+        position: relative;
+	    top: 31%;
+	}
+	#popup-baner2 a:hover {
+	    text-decoration: none;
+	    background: #2b2b2b;
+	}
+}
+@media screen and (max-width: 800px) {/*  スマホ  */
+	#popup-baner {
+	    display: none;
+	    }
+	#popup-baner2 {
+	    display: none;
+	    }
+}
+
+
+/* -----------------------------------------------  */
+/* ホバーzoom  */
+/* -----------------------------------------------  */
+.scale {
+    width: 200px;
+    height: 130px;
+    overflow: hidden;
+    border: 0px solid #CCC;
+    display: inline-block;
+}
+.scale img {
+    -moz-transition: -moz-transform 0.5s linear;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -o-transition: -o-transform 0.5s linear;
+    -ms-transition: -ms-transform 0.5s linear;
+    transition: transform 0.5s linear;
+    width: 100%;
+}
+.scale img:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.scale_box{
+    background: #FFF;
+}
+
+/* -----------------------------------------------  */
+/*  
+/* -----------------------------------------------  */
+
+/* -----------------------------------------------  */
+/*  
+/* -----------------------------------------------  */
+
+
+/* -----------------------------------------------  */
+/*  汎用クラス
+/* -----------------------------------------------  */
+div.c_wrap {
+    margin: 0 auto;
+    max-width: 960px;
+    width: inherit;
+}
+
+.marker_yellow_futo {/* マーカー */
+    background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, transparent), color-stop(0, #ffff93));
+    background: -webkit-linear-gradient(transparent 50%, #ffff93 0%);
+    background: -moz-linear-gradient(transparent 50%, #ffff93 0%);
+    background: -o-linear-gradient(transparent 50%, #ffff93 0%);
+    background: linear-gradient(transparent 50%, #ffff93 0%);
+}
+
+
+
+
+
+
+
+
+
+
+
+

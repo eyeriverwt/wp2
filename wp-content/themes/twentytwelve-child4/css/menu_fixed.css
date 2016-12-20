@@ -1,0 +1,279 @@
+/* -------------------------------------------------------------------  */
+/*  ハンバーガーmenu 
+----------------------------------------------------------------------  */
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+.menu-trigger {
+	position: relative;
+	width: 30px;
+	height: 24px;
+	cursor: pointer;
+	z-index: 100;
+}
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #000;
+	border-radius: 4px;
+}
+.active span {
+}
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+	top: 10px;
+}
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+	-webkit-transform: translateY(10px) rotate(-45deg);
+	transform: translateY(10px) rotate(-45deg);
+}
+.menu-trigger.active span:nth-of-type(2) {
+	left: 50%;
+	opacity: 0;
+	-webkit-animation: active-menu-bar02 .8s forwards;
+	animation: active-menu-bar02 .8s forwards;
+}
+@-webkit-keyframes active-menu-bar02 {
+	100% {
+		height: 0;
+	}
+}
+@keyframes active-menu-bar02 {
+	100% {
+		height: 0;
+	}
+}
+.menu-trigger.active span:nth-of-type(3) {
+	-webkit-transform: translateY(-10px) rotate(45deg);
+	transform: translateY(-10px) rotate(45deg);
+}
+	.nav-menu{
+		display:none;
+	}
+
+@media screen and (min-width: 1040px){/* menuの長さでmin-widthを調整 */
+	.menu-trigger{
+		display:none;
+	}
+	.nav-menu{
+	display:inherit;/*	 */
+	}
+}
+div.global-nav > ul {
+    text-align: center;
+    width: 100%;
+}
+.global-nav.toggled-active {
+    background: rgba(234,234,234,0.3);
+    	transition: all .4s;
+
+}
+.hamber{
+position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 10px;
+}
+/* ------------------------------  */
+/* ボタンクリック時 */
+@media screen and (max-width: 1040px){/* 中 */
+	.nav-menu.toggled-active {
+	    display: inline-block;
+	    padding: 20px;
+	    text-align: center;
+	    width: 100%;
+	}
+	.nav-menu.toggled-active li {
+		margin-bottom: 10px;
+	}
+	.nav-menu.toggled-active li ul.sub-menu {
+	    margin-left: 40px;
+	    margin-top: 10px;
+	    margin-bottom: 20px;
+	}.nav-menu.toggled-active a:hover {
+	    color:#ddd;
+	}
+}
+/* ------------------------------  */
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------  */
+/* menu 
+----------------------------------------------------------------------  */
+#masthead .inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.global-nav{
+	letter-spacing: 0.5px;
+	letter-spacing: 1px;
+	width: 100%;
+	position: fixed;
+	z-index: 1001;
+	background-repeat: repeat;
+	background:#FFF;
+	border-bottom: 0px solid #efefef;
+	border-bottom: 0px solid #009df1;
+	background: #4b4b4b;
+	background:linear-gradient(-135deg, rgba(253, 253, 253, 0.75), rgb(221, 239, 255)),url(/wp-content/uploads/img/slider_03.png);
+	background-size: cover;
+	box-shadow: 1px 2px 4px;
+}
+@media screen and (min-width: 1040px){/* PC */
+	.single-format-standard li#menu-item-1243 a,
+	.current-page-parent a,
+	.current_page_item a {
+	    border-bottom: 5px solid #3eccc2;
+	    box-sizing: border-box;
+	}
+	#global-nav ul {
+	    list-style: none;
+	    position: absolute;
+	    right: 0;
+	    bottom: 0;
+	    font-size: 14px;
+	}
+	#global-nav ul li {
+	    position: relative;
+	    display: inline-block;
+	 
+	}
+	#global-nav ul li a {
+	    padding: 10px 0px;
+	    width: 87px;
+	    height: 35px;
+	    display: inline-block;
+	    text-align: center;
+	    text-decoration: none;
+	}
+	#global-nav ul li a:hover {
+	    background: #e9eff7;
+	}
+
+	/*  submenu  */
+	#global-nav li ul.sub-menu {
+	    display:block;
+	    bottom: inherit;
+		visibility: hidden;
+		opacity: 0;
+		/*  transition: 0s;  */
+	}
+	
+	#global-nav li:hover ul.sub-menu  {
+	    bottom: inherit;
+		visibility: visible;
+		opacity: 1;
+		display:block;
+	    left: 0;
+	}
+	#global-nav li:hover ul.sub-menu li {
+		height: 35px;
+	    padding: 0;
+	    margin: 0;
+	}
+	#global-nav li:hover ul.sub-menu li a {
+		color: #FFF;
+		text-decoration: none;
+	    background: #00479d;
+	    padding-top: 12px;
+	    width: 200px;
+	    border-bottom: 0;
+	}
+	#global-nav li:hover ul.sub-menu li.menu-item-1064 a {
+		height: 40px;
+		font-size: 11px;
+	}
+	#global-nav li:hover ul.sub-menu li.menu-item-1070 a {
+		font-size: 12px;
+	}
+
+	#global-nav li:hover ul.sub-menu li a:hover {
+	    background: #2573d2;
+	}
+
+	#global-nav li:hover ul.sub-menu li:hover  {
+	    background: inherit;
+	}
+
+}
+@media screen and (max-width: 1040px){/* 中 */
+	nav#global-nav {
+		background: #00479d;
+		background: #143b69;
+	    padding: 0px;
+	    color: #FFF;
+	}
+	.nav-menu.toggled-active a {
+	    color: #FFF;
+	}
+	.sub-menu{
+		display:none;
+	}
+}
+
+
+
+
+
+
+
+/* 上部固定 */
+#masthead {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 0 0;
+    line-height: 1;
+	z-index: 100;
+}
+.fixed{
+	position: fixed;
+	top: 0px;
+	left: 0;
+    margin-top: 0px;
+}
+header#masthead {
+}
+header#masthead.fixed {
+	background:#ddd;
+    padding-top: 0px;
+    background: rgba(255,255,255,.9);
+    background: #FFF;
+    box-shadow: 1px 1px 4px #464646;
+}
+
+/* transition */
+#masthead,
+#masthead:after,
+#masthead .logo,
+#global-nav ul li,
+#global-nav ul li a {
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+}
+
+
+
